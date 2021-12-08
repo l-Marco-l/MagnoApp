@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:markets/src/elements/ReusableCont.dart';
 
 import '../../generated/l10n.dart';
 import '../elements/BlockButtonWidget.dart';
@@ -96,6 +97,7 @@ class MobileVerification extends StatelessWidget {
                       .headline6
                       .merge(TextStyle(color: Theme.of(context).primaryColor))),
             ),
+            WholeContainer()
           ],
         ),
       ),

@@ -5,7 +5,6 @@ import 'package:global_configuration/global_configuration.dart';
 import 'generated/l10n.dart';
 import 'route_generator.dart';
 import 'src/helpers/app_config.dart' as config;
-import 'src/helpers/custom_trace.dart';
 import 'src/models/setting.dart';
 import 'src/repository/settings_repository.dart' as settingRepo;
 import 'src/repository/user_repository.dart' as userRepo;
@@ -13,11 +12,7 @@ import 'src/repository/user_repository.dart' as userRepo;
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await GlobalConfiguration().loadFromAsset("configurations");
-  print(CustomTrace(StackTrace.current,
-      message: "base_url: ${GlobalConfiguration().getValue('base_url')}"));
-  print(CustomTrace(StackTrace.current,
-      message:
-          "api_base_url: ${GlobalConfiguration().getValue('api_base_url')}"));
+
   runApp(MyApp());
 }
 
